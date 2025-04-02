@@ -1,11 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- tailwindcss -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+          --color-clifford: blue;
+        }
+        /* :root { เปลี่ยนสี css 
+          --color-aomsin:red;
+          --color-red-500:rgb(85, 23, 23);
+          --color-red-400:rgb(145, 90, 90);
+        } */
+
+      /* .bgaomsin{
+        background-color: var(--color-aomsin);
+      } */
+      
+      </style>
+
+
+
 </head>
-<body>
-    
+
+<body style="background-color: #f7eedd;">
+
+  <nav class="p-8 shadow-md" style="background-color: #c4e093;">
+    <div class="justify-items-center">
+      <div class="text-center  grid grid-cols-5 gap-x-3 gap-y-4  text-xs">
+        <div><a href="#profolio" class="font-bold nav-link">หน้าหลัก</a></div>
+        <div><a href="#certificates" class="font-bold nav-link">ผลงาน</a></div>
+        <div><a href="#history" class="font-bold nav-link">ประวัติการศึกษา</a></div>
+        <div><a href="#certificates" class="font-bold nav-link">ผลงาน</a></div>
+        <div><a href="#picture" class="font-bold nav-link">ภาพบรรยากาศ</a></div>
+      </div>
+    </div>
+  </nav>
+  <section id="porfolio">
+    <div class="justify-items-center py-8">
+      <h1 class="font-bold">Porfolio</h1>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4 pl-4 pr-4">
+
+      <div>
+        <img class="min-h-50" src="img/cat.webp" alt="คาบิบาร่าตั้งส้ม">
+      </div>
+      <div class="content-center">
+        <div class="outline-solid rounded-3xl p-8">
+          <p class="font-bold">ข้อมูลส่วนตัว</p>
+          <p>ชื่อ : นายกฤตภาส บุญสมาน</p>
+
+          <p>ชื่อเล่น : ออมสิน</p>
+
+          <p>โรงเรียน : หาดใหญ่รัฐประชาสรรค์</p>
+
+          <p>แผนการเรียน : วิทย์-คณิต</p>
+
+          <p>ความสามารถพิเศษ : ---</p>
+
+          <p>งานอดิเรก : ฟังเพลง, ดูหนัง, ฟังเรื่องเล่า</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section id="proeface">
+    <div class="justify-items-center py-8">
+      <h1 class="font-bold">PROEFACE คำนำ</h1>
+    </div>
+  </section>
+  <section id="education">
+    <div class="justify-items-center py-8">
+      <h1 class="font-bold">EDUCATION ประวัติการศึกษา</h1>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center pl-4 pr-4">
+
+      <div>
+        <img src="img/CHUMCHONBANNAGUN.jpg">
+        <h5>ระดับชั้นประถมศึกษาปีที่ 1-6</h5>
+        <p>โรงเรียนชุมชนบ้านนากัน</p>
+      </div>
+
+      <div>
+        <img src="img/CHUMCHONBANNAGUN.jpg">
+        <h5>ระดับชั้นมัธยมศึกษาปีที่ 1-3</h5>
+        <p>โรงเรียนชุมชนบ้านนากัน</p>
+      </div>
+
+      <div>
+        <img src="img/yrs.jpg">
+        <h5>ระดับชั้นประถมศึกษาปีที่ 4-6</h5>
+        <p>โรงเรียนหาดใหญ่รัฐประชาสรรค์</p>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section id="certificates">
+    <div class="justify-items-center py-8">
+      <h1 class="font-bold">CERTIFICATES ผลงานที่ประทับใจ</h1>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 justify-items-center pl-4 pr-4">
+
+      <div>
+        <img class=" min-h-50" src="img/myrobtime.jpg">
+      </div>
+
+      <div class="content-center pl-4 pr-4">
+        <div class="outline-solid rounded-3xl p-8">
+          <h1 class="font-bold">Save the forest Senior (1-2 July 2566)</h1>
+          <p>การแข่งขันระดับประเทศ เขียนโค้ดบังคับหุ่นยนต์เดินเส้นประเภทหุ่นยนต์กู้ภัยไฟป่า </p>
+          <p>จากการแข่งขันดังกล่าวได้นำความรู้การใช้โปรแกรม MRT Scratch เพื่อให้หุ่นยนค์แก้ปัญหา</p>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section id="picture">
+    <div>
+
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.nav-link').forEach(link =>
+        link.onclick = e => {
+            e.preventDefault();
+            document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        }
+    );
+</script>
+
+
+
 </body>
+
 </html>
